@@ -8,15 +8,15 @@
   IgnorableNamespaces="uap uap3 mp">
 
 	<Identity
-	  Name="970eddca-0543-4032-91be-a616a4cad7c1"
-	  Publisher="CN=cmhoe"
-	  Version="1.0.0.0" />
+	  Name="62579ChristophHller.GameBarCounter"
+	  Publisher="CN=F3CD7EAE-7206-47E3-BE85-4DECCB0A3399"
+	  Version="1.0.4.0" />
 
-	<mp:PhoneIdentity PhoneProductId="970eddca-0543-4032-91be-a616a4cad7c1" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+	<mp:PhoneIdentity PhoneProductId="f639203e-6f7f-4c88-9581-29616592a1b9" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
 	<Properties>
-		<DisplayName>CounterWidget</DisplayName>
-		<PublisherDisplayName>cmhoe</PublisherDisplayName>
+		<DisplayName>Game Bar Counter</DisplayName>
+		<PublisherDisplayName>Christoph Höller</PublisherDisplayName>
 		<Logo>Assets\StoreLogo.png</Logo>
 	</Properties>
 
@@ -33,12 +33,12 @@
 		  Executable="$targetnametoken$.exe"
 		  EntryPoint="CounterWidget.App">
 			<uap:VisualElements
-			  DisplayName="CounterWidget"
+			  DisplayName="Game Bar Counter"
 			  Square150x150Logo="Assets\Square150x150Logo.png"
 			  Square44x44Logo="Assets\Square44x44Logo.png"
 			  Description="CounterWidget"
 			  BackgroundColor="transparent">
-				<uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
+				<uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png"/>
 				<uap:SplashScreen Image="Assets\SplashScreen.png" />
 			</uap:VisualElements>
 
@@ -47,8 +47,8 @@
 				<uap3:Extension Category="windows.appExtension">
 					<uap3:AppExtension Name="microsoft.gameBarUIExtension"
 									   Id="SimpleCounterWidget"
-									   DisplayName="Simple Counter"
-									   Description="Simple Counter Widget"
+									   DisplayName="Game Bar Counter"
+									   Description="Game Bar Counter Widget"
 									   PublicFolder="GameBar">
 						<uap3:Properties>
 							<GameBarWidget Type="Standard">
@@ -78,10 +78,6 @@
 
 		</Application>
 	</Applications>
-
-	<Capabilities>
-		<Capability Name="internetClient" />
-	</Capabilities>
 
 	<!--For Xbox Game Bar Widget-->
 	<Extensions>
