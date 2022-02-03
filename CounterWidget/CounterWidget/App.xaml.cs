@@ -25,7 +25,7 @@ namespace CounterWidget
     /// </summary>
     sealed partial class App : Application
     {
-        private XboxGameBarWidget widget = null;
+        private XboxGameBarWidget _widget = null;
 
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
@@ -81,14 +81,14 @@ namespace CounterWidget
                     Window.Current.Content = rootFrame;
 
                     // Create Game Bar widget object which bootstraps the connection with Game Bar
-                    widget = new XboxGameBarWidget(
+                    _widget = new XboxGameBarWidget(
                         widgetArgs,
                         Window.Current.CoreWindow,
                         rootFrame);
                     rootFrame.Navigate(typeof(MainPage));
 
                     Window.Current.Closed += WidgetWindow_Closed;
-                    
+
                     Window.Current.Activate();
                 }
                 else
@@ -100,7 +100,7 @@ namespace CounterWidget
 
         private void WidgetWindow_Closed(object sender, Windows.UI.Core.CoreWindowEventArgs e)
         {
-            widget = null;
+            _widget = null;
             Window.Current.Closed -= WidgetWindow_Closed;
         }
 
@@ -168,8 +168,7 @@ namespace CounterWidget
         {
             var deferral = e.SuspendingOperation.GetDeferral();
             //TODO: Save application state and stop any background activity
-            widget = null;
-            
+            _widget = null;
 
             deferral.Complete();
         }

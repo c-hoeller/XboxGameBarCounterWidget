@@ -18,7 +18,7 @@ namespace CounterWidget.Views
     {
         private string _counterName;
         private int _counterValue;
-        ApplicationDataContainer _localSettings = ApplicationData.Current.LocalSettings;
+        private readonly ApplicationDataContainer _localSettings = ApplicationData.Current.LocalSettings;
 
         public MainPage()
         {
@@ -56,8 +56,8 @@ namespace CounterWidget.Views
         private void IncrementCounterButtonClick(object sender, RoutedEventArgs e) => CounterValue++;
 
         private void ResetCounterButtonClick(object sender, RoutedEventArgs e) => CounterValue = 0;
-    
-        
+
+
 
         private void LoadState(object sender, RoutedEventArgs e)
         {
